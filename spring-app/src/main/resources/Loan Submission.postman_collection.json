@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "ba8f5baa-8e5a-4f72-aeb4-60202d78a66d",
+		"name": "Loan Submission",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "submit exaḿple 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n{\n\"loanId\": 2,\n\"requestedAmount\": 200000,\n\"termMonths\": 0,\n\"annualInterest\": 6.5,\n\"type\": \"student\",\n\"borrower\": {\n\"name\": \"James Gosling\",\n\"annualIncome\": \"150000\",\n\"delinquentDebt\": false,\n\"annualDebt\": 0\n}\n},\n{\n\"loanId\": 3,\n\"requestedAmount\": 10000,\n\"termMonths\": 0,\n\"annualInterest\": 4.5,\n\"type\": \"consumer\",\n\"borrower\": {\"name\": \"Matt Trebb\",\n\"annualIncome\": \"50000\",\n\"delinquentDebt\": false,\n\"annualDebt\": 10000\n}\n}\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/submit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"submit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "submit example 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n{\n\"loanId\": 1,\n\"requestedAmount\": 10000,\n\"termYears\": 2,\n\"termMonths\": 0,\n\"annualInterest\": 6,\n\"type\": \"consumer\",\n\"loanOfficerId\": 100,\n\"borrower\": {\n\"name\": \"James Gosling\",\"annualIncome\": \"100000\",\n\"delinquentDebt\": false,\n\"annualDebt\": 3000,\n\"creditHistory\": 6\n}\n}\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/submit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"submit"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
